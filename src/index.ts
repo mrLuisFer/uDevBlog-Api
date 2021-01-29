@@ -8,7 +8,7 @@ import cors from "cors"
 // Here is the function fro connect the db
 connectToDb()
 
-const PORT: number = 4000 || process.env.DB_PORT
+const PORT: number | string = process.env.DB_PORT ? process.env.DB_PORT : 4000
 app.set("port", PORT)
 // port variable
 const port: string = app.get("port")
