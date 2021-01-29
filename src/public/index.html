@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>uDevBlog</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="main__title">
+        Bienvenido a la API de <span class="link"> uDevBlog </span>
+      </h1>
+
+      <section class="section">
+        <p>
+          Esta API es usada para poder mostrar los articulos y posts que son
+          requeridos para poder usar en el frontend
+        </p>
+        <p>
+          Estos son los endpoints importantes a los que puedes acceder y obtener
+          los posts:
+        </p>
+        <article class="article">
+          <p>
+            Asi puedes obtener los posts para renderizarlos en el home
+            <span class="link"> /home </span>
+          </p>
+        </article>
+        <article class="article">
+          <p>
+            Renderiza algun articulo dependiendo con el _id que le pasemos por
+            parametro de la url
+            <span class="link">/article/:id</span>
+          </p>
+        </article>
+        <article class="article">
+          <p>
+            <span class="link">"POST" /home</span> Manda un post con el modelo
+            que se haya establecido en el
+            <code class="link">post.model.ts</code>
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

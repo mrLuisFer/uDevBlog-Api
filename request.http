@@ -1,0 +1,44 @@
+@URL =  http://localhost:4000
+
+### Ruta inicial
+
+GET {{URL}}
+
+### Obtiene los datos
+
+GET {{URL}}/home
+
+### Obtiene un articulo
+
+GET {{URL}}/article/600b7e05f58fe026cc047392
+
+### Manda un post
+
+POST {{URL}}/home
+Content-Type: application/json
+
+{ 
+  "title": "Como copiar codigo de Wikipedi",
+  "description": "Como programar de manera simple",
+  "categories": [
+    "javascript",
+    "typescript"
+  ],
+  "img": "https://javiniguez.com/wp-content/uploads/2019/07/que-es-javascript.jpg",
+  "html_content": "ddf"
+}
+
+
+### Elimina el post
+
+DELETE {{URL}}/article/600b95a9ce0e06438840476c
+
+### Actualiza el post
+
+PUT {{URL}}/article/5ffe6e4bb878f68ccde4c4d2
+Content-Type: application/json
+
+{
+  "title": "Aprendiendo un poco de Backend",
+  "description": "Esto es muy divertido :D"
+}
