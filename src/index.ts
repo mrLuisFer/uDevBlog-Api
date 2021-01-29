@@ -4,7 +4,6 @@ import morgan from "morgan"
 import getRoutes from "./routes/routes"
 import { connectToDb } from "./db/database"
 import cors from "cors"
-import serverless from "serverless-http"
 
 // Here is the function fro connect the db
 connectToDb()
@@ -29,4 +28,3 @@ app.listen(port, (): void => {
 
 // Routes
 getRoutes(app)
-module.exports.handler = serverless(app)

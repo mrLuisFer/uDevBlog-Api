@@ -1,6 +1,5 @@
 import { Express, Router } from "express"
 import * as controller from "./controllers/_index"
-import path from "path"
 
 const router: Router = Router()
 
