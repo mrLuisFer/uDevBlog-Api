@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.putPost = exports.postPosts = exports.getRoot = exports.getPots = exports.getArticle = exports.deletePost = void 0;
+const deletePost_1 = require("./deletePost");
+Object.defineProperty(exports, "deletePost", { enumerable: true, get: function () { return deletePost_1.deletePost; } });
+const getArticle_1 = require("./getArticle");
+Object.defineProperty(exports, "getArticle", { enumerable: true, get: function () { return getArticle_1.getArticle; } });
+const getPosts_1 = require("./getPosts");
+Object.defineProperty(exports, "getPots", { enumerable: true, get: function () { return getPosts_1.getPots; } });
+const getRoot_1 = require("./getRoot");
+Object.defineProperty(exports, "getRoot", { enumerable: true, get: function () { return getRoot_1.getRoot; } });
+const postPosts_1 = require("./postPosts");
+Object.defineProperty(exports, "postPosts", { enumerable: true, get: function () { return postPosts_1.postPosts; } });
+const putPosts_1 = require("./putPosts");
+Object.defineProperty(exports, "putPost", { enumerable: true, get: function () { return putPosts_1.putPost; } });
