@@ -1,5 +1,7 @@
 import { Express, Router } from "express"
 import * as controller from "./controllers/_index"
+import path from "path"
+
 const router: Router = Router()
 
 // Rutas
@@ -10,4 +12,6 @@ export default function getRoutes(app: Express): void {
   app.use("/article/:id", router.get("/article/:id", controller.getArticle))
   app.use("/article/:id", router.delete("/article/:id", controller.deletePost))
   app.use("/article/:id", router.put("/article/:id", controller.putPost))
+
+  app.use("/.netlify/functions/server", router) // path must route to lambda
 }

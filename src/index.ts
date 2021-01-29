@@ -1,9 +1,10 @@
 import express, { Express } from "express"
 const app: Express = express()
 import morgan from "morgan"
-import routes from "./routes/routes"
+import getRoutes from "./routes/routes"
 import { connectToDb } from "./db/database"
 import cors from "cors"
+import serverless from "serverless-http"
 
 // Here is the function fro connect the db
 connectToDb()
@@ -20,11 +21,12 @@ app.use(morgan("dev"))
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static(__dirname + "/public"))
+app.use(express.static(__dirname + "/index.html"))
 
 app.listen(port, (): void => {
   console.log("- Server on port", port)
 })
 
 // Routes
-routes(app)
+getRoutes(app)
+module.exports.handler = serverless(app)
