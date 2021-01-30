@@ -138,6 +138,7 @@ dist
 ### direnv ###
 .direnv
 .envrc
+/*.env
 
 ### dotenv ###
 .env

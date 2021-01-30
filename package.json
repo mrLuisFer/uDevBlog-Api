@@ -2,15 +2,15 @@
   "name": "uDevBlog-API",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev ./index.ts",
     "build": "tsc",
     "start": "node build/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "mrLuisFer",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
