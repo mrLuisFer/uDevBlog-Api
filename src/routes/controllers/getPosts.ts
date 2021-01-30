@@ -6,7 +6,7 @@ export const getPots: RequestHandler = async (req, res) => {
   try {
     const postData: Object | JSON = await Post.find()
 
-    if (!postData) return res.status(404).send("Post data not found")
+    if (postData === null) return res.status(404).send("Post data not found")
 
     return res.json(postData)
   } catch (error) {
