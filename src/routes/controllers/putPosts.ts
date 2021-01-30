@@ -15,7 +15,7 @@ export const putPost: RequestHandler = async (req, res) => {
       new: true,
     })
 
-    if (!postUpdated) return res.status(204).json()
+    if (postUpdated === null) return res.status(204).json()
     res.json(postUpdated)
   } else {
     res.send("Some error")
